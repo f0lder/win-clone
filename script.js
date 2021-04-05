@@ -223,14 +223,12 @@ function createIcons(rows, iconsPerRow) {
       title.classList.add("icon-title");
 
       title.innerHTML = "$_ICON_" + countR;
+      icon.setAttribute("id", "icon" + countR);
       countR++;
 
       var randomColor = Math.floor(Math.random() * 16777215).toString(16);
       icon.style.backgroundColor = "#" + randomColor;
-      icon.addEventListener("mouseover", function () {
-        icon.style.backgroundColor = "white";
-        icon.style.cursor = "pointer";
-      });
+
       icon_cont.appendChild(icon.cloneNode(true));
       icon_cont.appendChild(title.cloneNode(true));
       row.appendChild(icon_cont.cloneNode(true));
