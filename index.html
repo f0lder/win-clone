@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main" id="mydiv">
+        <div class="top-bar" id="mydivheader">
+            <p class="tab-name">$_CURRENT-TAB-DEFAULT</p>
+
+            <button class="close" onclick="kill(0)">x</button>
+            <button class="other-f" onclick="full(0)">□</button>
+            <button class="other-f" onclick="hide(0)">-</button>
+        </div>
+        <div class="options">
+            <div class="dropdown">
+                <button class="option">_FILE</button>
+                <div class="drop-content">
+                    <a href="">_NEW-FILE</a>
+                    <a href="">_OPEN-FILE</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="option">_EDIT</button>
+                <div class="drop-content">
+                    <a href="">_UNDO</a>
+                    <a href="">_REDO</a>
+                    <a href="">_CUT</a>
+                    <a href="">_COPY</a>
+                    <a href="">_PASTE</a>
+                </div>
+
+            </div>
+            <div class="dropdown">
+                <button class="option">_VIEW</button>
+                <div class="drop-content">
+                    <a href="">_SMALL-ICONS</a>
+                    <a href="">_MEDIUN-ICONS</a>
+                    <a href="">_LARGE-ICONS</a>
+                    <a href="">_COPY</a>
+                    <a href="">_PASTE</a>
+                </div>
+            </div>
+        </div>
+        <div class="window-files">
+            <div class="files">
+                <div class="list">
+                    <button class="files-menu" onclick="LIST('fav1')">_FAVORITES</button>
+                    <div class="cont" id="fav1">
+                        <a href="">_DESKTOP</a>
+                        <a href="">_UPLOADS</a>
+                        <a href="">_DOWNLOADS</a>
+                        <a href="">_DOCUMENTS</a>
+                        <a href="">_RANDOM-FOLDER</a>
+                    </div>
+                </div>
+                <div class="list">
+                    <button class="files-menu" onclick="LIST('fav2')">_LOCAL-MACHINE</button>
+                    <div class="cont" id="fav2">
+                        <a href="">_LOCAL-DISK(C:)</a>
+                        <a href="">_GAMES-DISK(D:)</a>
+                        <a href="">_NEW-VOLUME(E:)</a>
+                        <a href="">_DVD-READER(F:)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="new">
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+                <div class="crate"></div>
+            </div>
+        </div>
+    </div>
+    <div id="task-bar">
+        <input type="text" id="tab-Name">
+        <button onclick="createWindow()" class="show-tab">_NEW_WINDOW &nbsp;[+]</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
