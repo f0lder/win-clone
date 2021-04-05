@@ -226,3 +226,28 @@ button:focus {
   display: inline-block;
   border: 1px solid white;
 }
+.icons {
+  float: left;
+}
+.icons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.icon-title{
+    color: white;
+    text-align: center;
+}
+.icon-cont{
+    display: inline-block;
+    max-width: 10em;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+  margin: 1.5em;
+  margin-bottom: 1em;
+  display: inline-block;
+  border: 1px solid white;
+}

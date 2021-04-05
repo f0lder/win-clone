@@ -203,3 +203,42 @@ function createDropdown(title, array) {
   });
   options.appendChild(dropDown);
 }
+var countR = 1;
+function createIcons(rows, iconsPerRow) {
+  var icons = document.createElement("DIV");
+  icons.classList.add("icons");
+
+  var row = document.createElement("DIV");
+  row.classList.add("row");
+
+  var icon_cont = document.createElement("DIV");
+  icon_cont.classList.add("icon-cont");
+
+  for (var i = 1; i <= rows; i++) {
+    for (var j = 1; j <= iconsPerRow; j++) {
+      var icon = document.createElement("DIV");
+      icon.classList.add("icon");
+
+      var title = document.createElement("P");
+      title.classList.add("icon-title");
+
+      title.innerHTML = "$_ICON_" + countR;
+      countR++;
+
+      var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      icon.style.backgroundColor = "#" + randomColor;
+      icon.addEventListener("mouseover", function () {
+        icon.style.backgroundColor = "white";
+        icon.style.cursor = "pointer";
+      });
+      icon_cont.appendChild(icon.cloneNode(true));
+      icon_cont.appendChild(title.cloneNode(true));
+      row.appendChild(icon_cont.cloneNode(true));
+      icon_cont.innerHTML = "";
+    }
+    icons.appendChild(row.cloneNode(true));
+    row.innerHTML = "";
+  }
+  document.body.appendChild(icons);
+}
+createIcons(5, 10);
