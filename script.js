@@ -239,4 +239,17 @@ function createIcons(rows, iconsPerRow) {
   }
   document.body.appendChild(icons);
 }
-createIcons(5, 10);
+function genIcons() {
+  var r = parseInt(document.getElementById("Rows").value);
+  var i = parseInt(document.getElementById("PerRow").value);
+  createIcons(r, i);
+}
+function crate(x) {
+  cont = document.getElementById("files-cont");
+  div = document.createElement("DIV");
+  div.classList.add("crate");
+  for (var i = 0; i <= x; i++) {
+    cont.appendChild(div.cloneNode(true));
+  }
+}
+crate(100);
